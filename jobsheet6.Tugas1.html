@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 text align="left">Formulir Pendaftaran Siswa</h1>
+
+    <form action="/actionpage".php>
+
+   <div style="display: flex;">
+   <label for="n" style="width: 300px;">Nama Siswa </label> <label for="titik">:</label>
+   <input type="text" id="n" name="n" value="">
+   </div>
+   
+   <div style="display: flex;">
+   <label for="ttl" style="width: 300px;">Tempat/Tanggal Lahir </label> <label for="titik">:</label>
+   <input type="text" id="ttl" name="ttl" value="">
+   <label for="tgl"></label>
+   <input type="date" id="tgl" name="tgl">
+   </div>
+
+    <div style="display: flex;">
+    <label for="ttl" style="width: 300px;">Agama</label> <label for="titik">:</label>
+    <select id="ga" name="ga">
+    <option value="Is">Islam</option>
+    <option value="Kr">Kristen Protestan</option>
+    <option value="Ka">Katolik</option>
+    <option value="Hi">Hindu</option>
+    <option value="Bu">Buddha</option>
+    <option value="Ko">Konghucu</option>
+    </select>   
+    </div>
+
+    <div style="display: flex;">
+     <label for="no" style="width: 300px;">No Telp/Hp</label> <label for="titik">:</label>
+     <input type="number" id="no" name="no">
+    </div>
+
+     <div style="display: flex;">
+     <label for="al" style="width: 300px;">Alamat</label> <label for="titik">:</label>
+     <input type="text" id="al" name="al" value="">
+     </div>
+ 
+     <div style="display: flex;">
+    <label for="jk" style="width: 300px;">Jenis Kelamin</label> <label for="titik">:</label>
+    <input type="radio" id="jk" name="jk" value="Laki-laki">
+    <label for="la">Laki-laki</label>
+    <input type="radio" id="jk" name="jk" value="Perempuan">
+    <label for="per">Perempuan</label>
+   </div>
+    
+   <div style="display: flex;">
+   <label for="hb" style="width: 300px;">Hobi</label> <label for="titik">:</label>
+   <input type="checkbox" id="hb1" name="hb1" value="Membaca">
+   <label for="hb1">Membaca</label>
+   <input type="checkbox" id="hb2" name="hb2" value="Menulis">
+   <label for="hb2">Menulis</label>
+   <input type="checkbox" id="hb3" name="hb3" value="Olahraga">
+   <label for="hb3">Olahraga</label>
+   </div>
+
+   <div style="display: flex;">
+   <label for="pf" style="width: 300px;">Pas Foto</label> <label for="titik">:</label>
+   <label for="fl"></label>
+   <input type="file" id="fl" name="fl">
+   </div>
+
+   <div style="display: flex;">
+   <label for="us" style="width: 300px;">Username </label> <label for="titik">:</label>
+   <input type="text" id="us" name="us" value="">
+   </div>
+   
+   <div style="display: flex;">
+   <label for="ps" style="width: 300px;">Password </label> <label for="titik">:</label>
+   <input type="password" id="ps" name="ps" value="">
+   </div>   
+   
+   <center>
+   <input type="reset" value="RESET">
+   <input type="submit" value="SUBMIT">
+   </center>
+   
+    </form>
+
+</body>
+</html>
