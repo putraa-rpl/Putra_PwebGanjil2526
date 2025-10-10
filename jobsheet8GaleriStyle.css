@@ -1,0 +1,31 @@
+.galerigrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 700px;
+    margin: auto;
+    background-color: pink;
+    padding: 10px;
+}
+
+.galerigrid img {
+    width: 230px ;
+    height: 200px;
+    margin: auto;
+    border: 2px solid black;
+}
+
+.galerigut {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 700px;
+    margin: auto;
+    background-color: pink;
+    padding: 10px;
+}
+
+.galerigut img {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    border: 2px solid black;
+}

@@ -1,0 +1,17 @@
+div {
+    width: 600px;
+    margin: 10px auto;
+    box-sizing: border-box;
+}
+
+.satu {
+    background-color: darkgray;
+    padding: 10px;
+    border: 15px solid beige;
+}
+
+.dua {
+    background-color: blanchedalmond;
+    padding: 30px;
+    border: 10px dashed khaki;
+}
