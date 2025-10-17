@@ -1,0 +1,11 @@
+var a = 10;
+var b = 5;
+document.writeln("Perkalian : 10 * 5 = 50");
+document.writeln("<br>");
+document.writeln("Pembagian : 10 / 5 = 2");
+document.writeln("<br>");
+document.writeln("Penjumlahan : 10 + 5 = 15");
+document.writeln("<br>");
+document.writeln("Pengurangan : 10 - 5 = 5");
+document.writeln("<br>");
+document.writeln("Modulus : 10 % 5 = 0");
