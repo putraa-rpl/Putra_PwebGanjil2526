@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menghitung Indeks Prestasi</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+        table {
+            border-collapse: collapse;
+            margin: 0 auto;
+            width: 80%;
+        }
+        td {
+            padding: 8px;
+        }
+        h2 {
+            text-align: center;
+        }
+        input[type="text"] {
+            padding: 5px;
+        }
+        button {
+            padding: 8px 15px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table border="1">
+        <tr>
+            <td rowspan="2"><img src="images.png" alt="logo"></td>
+            <td colspan="3"><h2>Menghitung Indeks Prestasi</h2></td>
+        </tr>
+
+        <tr>
+            <td colspan="3"><h2>Peserta didik SMK Igasar Pindad Bandung</h2></td>
+        </tr>
+
+        <tr>
+            <td>Quiz (10%)</td>
+            <td><input type="text" size="16" id="quiz"></td>
+
+            <td>Tugas (20%)</td>
+            <td><input type="text" size="16" id="tugas"></td>
+        </tr>
+
+        <tr>
+            <td>UTS (30%)</td>
+            <td><input type="text" size="16" id="uts"></td>
+
+            <td>UAS (40%)</td>
+            <td><input type="text" size="16" id="uas"></td>
+        </tr>
+
+        <tr>
+            <td colspan="4" align="center" style="padding: 15px;">
+                <button onclick="hitungIP()">Hitung</button>
+                <button onclick="ulangIP()">Ulang</button>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="4" align="center">
+                Nilai Akhir :
+                <input type="text" size="4" id="nilaiAkhir" readonly>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="4" align="center">
+                Indeks Prestasi :
+                <input type="text" size="3" id="indeksPrestasi" readonly>
+
+                &nbsp; Keterangan :
+                <input type="text" size="19" id="keterangan" readonly>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        function hitungIP() {
+            var quiz = parseFloat(document.getElementById("quiz").value);
+            var tugas = parseFloat(document.getElementById("tugas").value);
+            var uts = parseFloat(document.getElementById("uts").value);
+            var uas = parseFloat(document.getElementById("uas").value);
+
+            if (isNaN(quiz) || isNaN(tugas) || isNaN(uts) || isNaN(uas)) {
+                alert("Semua nilai harus diisi dengan angka!");
+                return;
+            }
+
+            var nilaiAkhir = (quiz * 0.1) + (tugas * 0.2) + (uts * 0.3) + (uas * 0.4);
+            var indeks, ket;
+
+            if (nilaiAkhir > 80 && nilaiAkhir <= 100) {
+                indeks = "A";
+                ket = "Lulus dengan sangat baik";
+            } else if (nilaiAkhir > 68 && nilaiAkhir <= 80) {
+                indeks = "B";
+                ket = "Lulus dengan baik";
+            } else if (nilaiAkhir > 55 && nilaiAkhir <= 68) {
+                indeks = "C";
+                ket = "Lulus dengan cukup";
+            } else if (nilaiAkhir > 38 && nilaiAkhir <= 55) {
+                indeks = "D";
+                ket = "Lulus dengan kurang";
+            } else if (nilaiAkhir >= 0 && nilaiAkhir <= 38) {
+                indeks = "E";
+                ket = "Tidak Lulus";
+            } else {
+                alert("Nilai tidak valid (0–100)!");
+                return;
+            }
+
+            document.getElementById("nilaiAkhir").value = nilaiAkhir.toFixed(2);
+            document.getElementById("indeksPrestasi").value = indeks;
+            document.getElementById("keterangan").value = ket;
+        }
+
+        function ulangIP() {
+            document.getElementById("quiz").value = "";
+            document.getElementById("tugas").value = "";
+            document.getElementById("uts").value = "";
+            document.getElementById("uas").value = "";
+            document.getElementById("nilaiAkhir").value = "";
+            document.getElementById("indeksPrestasi").value = "";
+            document.getElementById("keterangan").value = "";
+        }
+    </script>
+
+</body>
+</html>
